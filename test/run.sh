@@ -7,7 +7,7 @@ set -eo pipefail
 cd "$(dirname "$0")"
 
 # Load the utilities
-source ./utils.sh
+. ./utils.sh
 
 yellowText "Testing $dockerImage ...\n"
 
