@@ -2,13 +2,10 @@
 pipelines:
   default: 
     - step:
-        name: Building the image
+        name: Building the image & running tests
         script:
           - make build
           - cat build_log.txt
-    - step:
-        name: Running tests
-        script:
           - make tests
     
 options:
