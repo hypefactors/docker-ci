@@ -1,12 +1,8 @@
-version: '2'
+version: '3'
 
 services:
-  hf-ci-image:
-    build: .
-
   sut:
-    build: test
-    links:
-      - hf-ci-image
+    build: .
     volumes:
-      - ./test/goss:/goss
+      - ./test:/goss
+    command: ["/goss/goss", "-g", "/goss/goss.yaml", "validate"]
