@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  hf-ci-image:
+    build: .
+
+  sut:
+    build: test
+    links:
+      - hf-ci-image
+    volumes:
+      - ./test/goss:/goss
