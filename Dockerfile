@@ -7,11 +7,11 @@ ENV LANG C.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL C.UTF-8
 
-# # INSTALL
+# INSTALL
 RUN apt-get update \
     && apt-get install -y apt-utils curl unzip git software-properties-common
 
-# # PHP 7.1
+# PHP 7.1
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
     && apt-get install -y libmcrypt-dev libpq-dev libpng-dev \
        php7.1-fpm php7.1-cli php7.1-mcrypt php7.1-gd php7.1-memcached \
@@ -20,10 +20,13 @@ RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
     && phpenmod mcrypt \
     && mkdir /run/php
 
-# # Composer
+# MySQL
+RUN apt-get update && apt-get install -y mysql-client
+
+# Composer
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
-# # Node.js v8
+# Node.js v8
 RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash - \
     && apt-get install nodejs -y
 
