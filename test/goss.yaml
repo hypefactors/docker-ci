@@ -13,9 +13,6 @@ user:
 group:
   mysql:
     exists: true
-process:
-  mysql:
-    running: false
 
 command:
   composer --version:
