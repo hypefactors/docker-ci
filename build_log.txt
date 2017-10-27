@@ -1,6 +1,6 @@
 IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
-73eb00c6ffd6        16 minutes ago      /bin/sh -c apt-get remove -y --purge apt-u...   2.46MB              
-775b81118899        16 minutes ago      /bin/sh -c #(nop) ADD dir:7987520a26a7ea7b...   345B                
+d0ebdfedffa2        52 seconds ago      /bin/sh -c apt-get remove -y --purge apt-u...   2.46MB              
+2f7cbb9646b6        58 seconds ago      /bin/sh -c #(nop) ADD dir:2b2aba5c072f4c6e...   333B                
 8ff3ac56cf05        About an hour ago   /bin/sh -c apt-get update && apt-get insta...   297MB               
 0f4c5975cd8c        2 days ago          /bin/sh -c curl --silent --location https:...   81.3MB              
 6be9623a34ff        2 days ago          /bin/sh -c php -r "readfile('http://getcom...   1.85MB              
