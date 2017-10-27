@@ -30,6 +30,9 @@ RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash - \
 # MySQL
 RUN apt-get update && apt-get install -y mysql-client mysql-server
 
+# Copy configuration scripts
+ADD config /config
+
 # Cleanup for smaller image size
 RUN apt-get remove -y --purge apt-utils software-properties-common \
     && apt-get clean \
