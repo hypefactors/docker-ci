@@ -1,18 +1,18 @@
-IMAGE               CREATED                  CREATED BY                                      SIZE                COMMENT
-385f379333ef        Less than a second ago   /bin/sh -c apt-get remove -y --purge apt-u...   2.32MB              
-201dffc0d7ce        6 seconds ago            /bin/sh -c curl --silent --location https:...   81.5MB              
-a0c95599bb46        34 seconds ago           /bin/sh -c php -r "readfile('http://getcom...   1.85MB              
-ab104a971db6        37 seconds ago           /bin/sh -c apt-get update && apt-get insta...   71.7MB              
-9e3193058c1f        22 hours ago             /bin/sh -c add-apt-repository -y ppa:ondre...   70.2MB              
-1393942f09c3        22 hours ago             /bin/sh -c apt-get update     && apt-get i...   225MB               
-ea529af6538d        22 hours ago             /bin/sh -c #(nop)  ENV LC_ALL=C.UTF-8           0B                  
-db78a82fb3ef        22 hours ago             /bin/sh -c #(nop)  ENV LANGUAGE=en_US:en        0B                  
-cb303ded83b4        22 hours ago             /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                  
-e0edf1036985        22 hours ago             /bin/sh -c #(nop)  ENV DEBIAN_FRONTEND=non...   0B                  
-806662306382        22 hours ago             /bin/sh -c #(nop)  LABEL maintainer=Hypefa...   0B                  
-747cb2d60bbe        2 weeks ago              /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
-<missing>           2 weeks ago              /bin/sh -c mkdir -p /run/systemd && echo '...   7B                  
-<missing>           2 weeks ago              /bin/sh -c sed -i 's/^#\s*\(deb.*universe\...   2.76kB              
-<missing>           2 weeks ago              /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
-<missing>           2 weeks ago              /bin/sh -c set -xe   && echo '#!/bin/sh' >...   745B                
-<missing>           2 weeks ago              /bin/sh -c #(nop) ADD file:5b334adf9d9a225...   122MB               
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+43c01dcf9465        12 minutes ago      /bin/sh -c apt-get remove -y --purge apt-u...   2.46MB              
+8ff3ac56cf05        16 minutes ago      /bin/sh -c apt-get update && apt-get insta...   297MB               
+0f4c5975cd8c        2 days ago          /bin/sh -c curl --silent --location https:...   81.3MB              
+6be9623a34ff        2 days ago          /bin/sh -c php -r "readfile('http://getcom...   1.85MB              
+9e3193058c1f        2 days ago          /bin/sh -c add-apt-repository -y ppa:ondre...   70.2MB              
+1393942f09c3        2 days ago          /bin/sh -c apt-get update     && apt-get i...   225MB               
+ea529af6538d        2 days ago          /bin/sh -c #(nop)  ENV LC_ALL=C.UTF-8           0B                  
+db78a82fb3ef        2 days ago          /bin/sh -c #(nop)  ENV LANGUAGE=en_US:en        0B                  
+cb303ded83b4        2 days ago          /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                  
+e0edf1036985        2 days ago          /bin/sh -c #(nop)  ENV DEBIAN_FRONTEND=non...   0B                  
+806662306382        2 days ago          /bin/sh -c #(nop)  LABEL maintainer=Hypefa...   0B                  
+747cb2d60bbe        2 weeks ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
+<missing>           2 weeks ago         /bin/sh -c mkdir -p /run/systemd && echo '...   7B                  
+<missing>           2 weeks ago         /bin/sh -c sed -i 's/^#\s*\(deb.*universe\...   2.76kB              
+<missing>           2 weeks ago         /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
+<missing>           2 weeks ago         /bin/sh -c set -xe   && echo '#!/bin/sh' >...   745B                
+<missing>           2 weeks ago         /bin/sh -c #(nop) ADD file:5b334adf9d9a225...   122MB               

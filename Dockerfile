@@ -20,15 +20,15 @@ RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
     && phpenmod mcrypt \
     && mkdir /run/php
 
-# MySQL
-RUN apt-get update && apt-get install -y mysql-client
-
 # Composer
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
 # Node.js v8
 RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash - \
     && apt-get install nodejs -y
+
+# MySQL
+RUN apt-get update && apt-get install -y mysql-client mysql-server
 
 # Cleanup for smaller image size
 RUN apt-get remove -y --purge apt-utils software-properties-common \

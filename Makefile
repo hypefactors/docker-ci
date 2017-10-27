@@ -2,9 +2,13 @@ IMAGE=hypefactors/docker-ci:latest
 
 .DEFAULT_GOAL := help
 
+shell: ## Enters the shell
+	docker run -it hypefactors/docker-ci:latest bash
+
 build: ## Build the docker image
 	docker build -t hypefactors/docker-ci:latest .
 	docker history $(IMAGE) > build_log.txt
+
 tests: ## Run the unit tests
 	GOSS_PATH=./test/goss GOSS_FILES_PATH=./test ./test/dgoss run -t hypefactors/docker-ci:latest
 
