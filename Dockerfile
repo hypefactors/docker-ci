@@ -33,6 +33,9 @@ RUN apt-get update && apt-get install -y mysql-client mysql-server
 # Copy configuration scripts
 ADD config /config
 
+# Install Goss
+RUN curl -fsSL https://goss.rocks/install | sh
+
 # Cleanup for smaller image size
 RUN apt-get remove -y --purge apt-utils software-properties-common \
     && apt-get clean \

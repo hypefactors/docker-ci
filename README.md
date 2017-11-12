@@ -5,3 +5,12 @@
 * PHP 7.1
 * Composer
 * Node.js 8
+* MySQL
+
+## Testing
+
+> Make sure that you have Goss and Dgoss installed
+https://github.com/aelsabbahy/goss/tree/master/extras/dgoss
+
+
+`make tests`
