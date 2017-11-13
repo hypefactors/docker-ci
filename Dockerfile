@@ -17,6 +17,7 @@ RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
        php7.1-fpm php7.1-cli php7.1-mcrypt php7.1-gd php7.1-memcached \
        php7.1-mysql php7.1-pgsql php7.1-sqlite3 php7.1-imap php7.1-mbstring \       
        php7.1-json php7.1-curl php7.1-gd php7.1-gmp php7.1-zip php-redis php7.1-xml \
+       php-xdebug curl \
     && phpenmod mcrypt \
     && mkdir /run/php
 
