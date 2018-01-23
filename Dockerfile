@@ -6,6 +6,12 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL C.UTF-8
+# good colors for most applications
+ENV TERM xterm
+# avoid million NPM install messages
+ENV npm_config_loglevel warn 
+# allow installing when the main user is root
+ENV npm_config_unsafe_perm true
 
 # INSTALL
 RUN apt-get update \
@@ -33,12 +39,27 @@ RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
 # Composer
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
-# Node.js v8
-RUN curl --silent --location https://deb.nodesource.com/setup_8.x | bash - \
-    && apt-get install nodejs -y
-
 # MySQL
 RUN apt-get update && apt-get install -y mysql-client mysql-server
+
+# Node.js v9
+RUN curl --silent --location https://deb.nodesource.com/setup_9.x | bash - \
+    && apt-get install nodejs -y
+
+# Chrome
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list && \
+    apt-get update && \
+    apt-get install -y dbus-x11 google-chrome-stable
+
+# "fake" dbus address to prevent errors
+# https://github.com/SeleniumHQ/docker-selenium/issues/87
+ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
+
+# Cypress.js dependencies
+RUN apt-get update && \
+    apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 \
+    libnss3 libxss1 libasound2 xvfb
 
 # Copy configuration scripts
 ADD config /config
