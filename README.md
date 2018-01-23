@@ -4,8 +4,9 @@
 * Ubuntu 16.04 as a base image
 * PHP 7.1
 * Composer
-* Node.js 8
 * MySQL
+* Node.js 9
+* Google Chrome
 
 ## Testing
 
