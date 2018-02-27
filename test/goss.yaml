@@ -55,6 +55,14 @@ command:
     stderr: []
     timeout: 1000
 
+  php --ri mongodb | grep "MongoDB extension version":
+    title: Checking that PHP mongodb version
+    exit-status: 0
+    stdout:
+      - /1.4/
+    stderr: []
+    timeout: 1000
+
   mysql --version:
     title: Checking that MySQL client is installed
     exit-status: 0

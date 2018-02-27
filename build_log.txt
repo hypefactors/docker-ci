@@ -1,14 +1,14 @@
 IMAGE               CREATED                  CREATED BY                                      SIZE                COMMENT
-a2f23ebdd131        Less than a second ago   /bin/sh -c apt-get remove -y --purge apt-uti…   3.21MB              
-b4c64ce1d10a        Less than a second ago   /bin/sh -c curl -fsSL https://goss.rocks/ins…   8.52MB              
-7bc013947a43        1 second ago             /bin/sh -c #(nop) ADD dir:1255903780a4163a49…   333B                
-cb663b375073        1 second ago             /bin/sh -c apt-get update &&     apt-get ins…   161MB               
-5552f7655657        22 seconds ago           /bin/sh -c #(nop)  ENV DBUS_SESSION_BUS_ADDR…   0B                  
-d13d3f0f9c1f        23 seconds ago           /bin/sh -c wget -q -O - https://dl-ssl.googl…   189MB               
-67afdaa97f45        41 seconds ago           /bin/sh -c curl --silent --location https://…   86.2MB              
-9116663f2208        About a minute ago       /bin/sh -c apt-get update && apt-get install…   292MB               
-9ba314e7ad17        About a minute ago       /bin/sh -c php -r "readfile('http://getcompo…   1.86MB              
-c69a02568d13        About a minute ago       /bin/sh -c add-apt-repository -y ppa:ondrej/…   79.1MB              
+562549c6beec        Less than a second ago   /bin/sh -c apt-get remove -y --purge apt-uti…   5MB                 
+2bdcd277073a        Less than a second ago   /bin/sh -c curl -fsSL https://goss.rocks/ins…   8.52MB              
+b55942089b68        Less than a second ago   /bin/sh -c #(nop) ADD dir:1255903780a4163a49…   333B                
+8ec1a1c5f64b        Less than a second ago   /bin/sh -c apt-get update &&     apt-get ins…   41.6MB              
+3be74bdc2be8        14 seconds ago           /bin/sh -c #(nop)  ENV DBUS_SESSION_BUS_ADDR…   0B                  
+6326fc2eba7b        14 seconds ago           /bin/sh -c wget -q -O - https://dl-ssl.googl…   191MB               
+5bd9eb282f32        32 seconds ago           /bin/sh -c curl --silent --location https://…   87.8MB              
+b60ed388250d        53 seconds ago           /bin/sh -c apt-get update && apt-get install…   294MB               
+41e1ff50b1be        About a minute ago       /bin/sh -c php -r "readfile('http://getcompo…   1.86MB              
+0f6a348b1595        About a minute ago       /bin/sh -c add-apt-repository -y ppa:ondrej/…   234MB               
 6c416a9eb80f        4 weeks ago              /bin/sh -c apt-get update     && apt-get ins…   220MB               
 faef5b02af5c        4 weeks ago              /bin/sh -c apt-get update     && apt-get ins…   225MB               
 610988c560b1        4 weeks ago              /bin/sh -c #(nop)  ENV npm_config_unsafe_per…   0B                  

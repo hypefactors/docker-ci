@@ -28,11 +28,13 @@ RUN apt-get update \
 
 # PHP 7.1
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
-    && apt-get install -y libmcrypt-dev libpq-dev libpng-dev \
-       php7.1-fpm php7.1-cli php7.1-mcrypt php7.1-gd php7.1-memcached \
-       php7.1-mysql php7.1-mongodb php7.1-pgsql php7.1-sqlite3 php7.1-imap php7.1-mbstring \       
+    && apt-get install -y libmcrypt-dev libpq-dev libpng-dev php-pear \
+       php7.1-dev php7.1-fpm php7.1-cli php7.1-mcrypt php7.1-gd php7.1-memcached \
+       php7.1-mysql php7.1-pgsql php7.1-sqlite3 php7.1-imap php7.1-mbstring \       
        php7.1-json php7.1-curl php7.1-gd php7.1-gmp php7.1-zip php-redis php7.1-xml \
        php-xdebug \
+    && pecl install mongodb \
+    && echo "extension=mongodb.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` \
     && phpenmod mcrypt \
     && mkdir /run/php
 
