@@ -40,10 +40,10 @@ command:
     timeout: 1000
 
   google-chrome --version:
-    title: Checking that Chrome 63 is installed
+    title: Checking that Chrome 64 is installed
     exit-status: 0
     stdout:
-      - /Google Chrome 63/
+      - /Google Chrome 64/
     stderr: []
     timeout: 1000
 

@@ -6,7 +6,7 @@
 * Composer
 * MySQL
 * Node.js 9
-* Google Chrome
+* Google Chrome 64
 
 ## Testing
 
