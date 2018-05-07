@@ -13,7 +13,7 @@ ENV npm_config_loglevel warn
 # allow installing when the main user is root
 ENV npm_config_unsafe_perm true
 # 
-ENV CLOUD_SDK_VERSION 198.0.0
+ENV CLOUD_SDK_VERSION 200.0.0
 
 # INSTALL
 RUN apt-get update \
@@ -22,8 +22,8 @@ RUN apt-get update \
 # PHP 7.1
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
     && apt-get install -y libmcrypt-dev libpq-dev libpng-dev php-pear \
-       php7.1-dev php7.1-fpm php7.1-cli php7.1-mcrypt php7.1-gd php7.1-memcached \
-       php7.1-mysql php7.1-pgsql php7.1-sqlite3 php7.1-imap php7.1-mbstring \       
+       php7.1-dev php7.1-fpm php7.1-cli php7.1-mcrypt php7.1-gd \
+       php7.1-mysql php7.1-sqlite3 php7.1-imap php7.1-mbstring \       
        php7.1-json php7.1-curl php7.1-gd php7.1-gmp php7.1-zip php-redis php7.1-xml \
     && pecl install mongodb \
     && echo "extension=mongodb.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` \
