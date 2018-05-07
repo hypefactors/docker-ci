@@ -1,27 +1,29 @@
-IMAGE               CREATED                  CREATED BY                                      SIZE                COMMENT
-562549c6beec        Less than a second ago   /bin/sh -c apt-get remove -y --purge apt-uti…   5MB                 
-2bdcd277073a        Less than a second ago   /bin/sh -c curl -fsSL https://goss.rocks/ins…   8.52MB              
-b55942089b68        Less than a second ago   /bin/sh -c #(nop) ADD dir:1255903780a4163a49…   333B                
-8ec1a1c5f64b        Less than a second ago   /bin/sh -c apt-get update &&     apt-get ins…   41.6MB              
-3be74bdc2be8        14 seconds ago           /bin/sh -c #(nop)  ENV DBUS_SESSION_BUS_ADDR…   0B                  
-6326fc2eba7b        14 seconds ago           /bin/sh -c wget -q -O - https://dl-ssl.googl…   191MB               
-5bd9eb282f32        32 seconds ago           /bin/sh -c curl --silent --location https://…   87.8MB              
-b60ed388250d        53 seconds ago           /bin/sh -c apt-get update && apt-get install…   294MB               
-41e1ff50b1be        About a minute ago       /bin/sh -c php -r "readfile('http://getcompo…   1.86MB              
-0f6a348b1595        About a minute ago       /bin/sh -c add-apt-repository -y ppa:ondrej/…   234MB               
-6c416a9eb80f        4 weeks ago              /bin/sh -c apt-get update     && apt-get ins…   220MB               
-faef5b02af5c        4 weeks ago              /bin/sh -c apt-get update     && apt-get ins…   225MB               
-610988c560b1        4 weeks ago              /bin/sh -c #(nop)  ENV npm_config_unsafe_per…   0B                  
-0a94b06b8505        4 weeks ago              /bin/sh -c #(nop)  ENV npm_config_loglevel=w…   0B                  
-55484af3c492        4 weeks ago              /bin/sh -c #(nop)  ENV TERM=xterm               0B                  
-636f577c953d        2 months ago             /bin/sh -c #(nop)  ENV LC_ALL=C.UTF-8           0B                  
-676c6dad19de        2 months ago             /bin/sh -c #(nop)  ENV LANGUAGE=en_US:en        0B                  
-6e1feb65cdc2        2 months ago             /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                  
-91bc5f08ce52        2 months ago             /bin/sh -c #(nop)  ENV DEBIAN_FRONTEND=nonin…   0B                  
-30608e2fa651        2 months ago             /bin/sh -c #(nop)  LABEL maintainer=Hypefact…   0B                  
-20c44cd7596f        3 months ago             /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
-<missing>           3 months ago             /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
-<missing>           3 months ago             /bin/sh -c sed -i 's/^#\s*\(deb.*universe\)$…   2.76kB              
-<missing>           3 months ago             /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
-<missing>           3 months ago             /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
-<missing>           3 months ago             /bin/sh -c #(nop) ADD file:280a445783f309c90…   123MB               
+IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
+16c779d388cd        21 seconds ago       /bin/sh -c apt-get remove -y --purge apt-uti…   5.48MB              
+276fe4cf2e5a        25 seconds ago       /bin/sh -c curl -fsSL https://goss.rocks/ins…   8.52MB              
+144cf7903f60        34 seconds ago       /bin/sh -c chmod +x /usr/local/bin/cloud_sql…   7.51MB              
+8b3c090bd777        35 seconds ago       /bin/sh -c #(nop) ADD ca5ff1a1b68401307625bf…   7.51MB              
+bca97c85c00a        37 seconds ago       /bin/sh -c apt-get -qqy update && apt-get in…   175MB               
+c45d9fa180b1        About a minute ago   /bin/sh -c #(nop) ADD dir:1255903780a4163a49…   333B                
+08e75331544b        About a minute ago   /bin/sh -c apt-get update &&     apt-get ins…   223MB               
+72b8380bc45a        About a minute ago   /bin/sh -c #(nop)  ENV DBUS_SESSION_BUS_ADDR…   0B                  
+67c12dbe6b4c        About a minute ago   /bin/sh -c curl --silent --location https://…   87.3MB              
+5a3d1fea08fc        2 minutes ago        /bin/sh -c apt-get update && apt-get install…   69.3MB              
+2870c0c193b5        2 minutes ago        /bin/sh -c php -r "readfile('http://getcompo…   1.85MB              
+7fcc3cda10c6        2 minutes ago        /bin/sh -c add-apt-repository -y ppa:ondrej/…   242MB               
+c89c4b03abdf        4 minutes ago        /bin/sh -c apt-get update     && apt-get ins…   237MB               
+1bccf121b4f9        4 minutes ago        /bin/sh -c #(nop)  ENV CLOUD_SDK_VERSION=200…   0B                  
+5d8e869d9ef0        About an hour ago    /bin/sh -c #(nop)  ENV npm_config_unsafe_per…   0B                  
+e9250d2afff6        About an hour ago    /bin/sh -c #(nop)  ENV npm_config_loglevel=w…   0B                  
+b27feb7ed5fd        About an hour ago    /bin/sh -c #(nop)  ENV TERM=xterm               0B                  
+bd4a85f16fc6        6 months ago         /bin/sh -c #(nop)  ENV LC_ALL=C.UTF-8           0B                  
+71da8a6dc173        6 months ago         /bin/sh -c #(nop)  ENV LANGUAGE=en_US:en        0B                  
+5f1a52cd8264        6 months ago         /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                  
+7b857b86b07c        6 months ago         /bin/sh -c #(nop)  ENV DEBIAN_FRONTEND=nonin…   0B                  
+b9cd32fdc4f0        6 months ago         /bin/sh -c #(nop)  LABEL maintainer=Hypefact…   0B                  
+747cb2d60bbe        6 months ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
+<missing>           6 months ago         /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
+<missing>           6 months ago         /bin/sh -c sed -i 's/^#\s*\(deb.*universe\)$…   2.76kB              
+<missing>           6 months ago         /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
+<missing>           6 months ago         /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
+<missing>           6 months ago         /bin/sh -c #(nop) ADD file:5b334adf9d9a2256a…   122MB               
