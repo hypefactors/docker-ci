@@ -75,6 +75,10 @@ COPY --from=static-docker-source /usr/local/bin/docker /usr/local/bin/docker
 ADD https://circle-downloads.s3.amazonaws.com/releases/build_agent_wrapper/circleci /usr/local/bin/circleci
 RUN chmod +x /usr/local/bin/circleci
 
+# Lokalise
+ADD https://s3-eu-west-1.amazonaws.com/lokalise-assets/cli/lokalise-0.58-linux-amd64.tgz /tmp
+RUN cd tmp && tar xvfz lokalise*.tgz && mv /tmp/lokalise /usr/local/bin
+
 # Install Goss
 RUN curl -fsSL https://goss.rocks/install | sh
 
