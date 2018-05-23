@@ -22,15 +22,13 @@ ENV CLOUD_SDK_VERSION 200.0.0
 RUN apt-get update \
     && apt-get install -y apt-utils curl unzip git software-properties-common lsb-release
 
-# PHP 7.1
+# PHP 7.2
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
-    && apt-get install -y libmcrypt-dev libpq-dev libpng-dev php-pear \
-       php7.1-dev php7.1-fpm php7.1-cli php7.1-mcrypt php7.1-gd \
-       php7.1-mysql php7.1-sqlite3 php7.1-imap php7.1-mbstring \       
-       php7.1-json php7.1-curl php7.1-gd php7.1-gmp php7.1-zip php-redis php7.1-xml \
-    && pecl install mongodb \
-    && echo "extension=mongodb.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"` \
-    && phpenmod mcrypt \
+    && apt-get install -y libpq-dev libpng-dev php-pear \
+       php7.2-dev php7.2-fpm php7.2-cli php7.2-gd \
+       php7.2-mysql php7.2-sqlite3 php7.2-imap php7.2-mbstring \       
+       php7.2-json php7.2-curl php7.2-gd php7.2-gmp php7.2-zip php-redis php7.2-xml \
+       php-yaml php-mongodb \ 
     && mkdir /run/php
 
 # Composer
@@ -76,7 +74,7 @@ ADD https://circle-downloads.s3.amazonaws.com/releases/build_agent_wrapper/circl
 RUN chmod +x /usr/local/bin/circleci
 
 # Lokalise
-ADD https://s3-eu-west-1.amazonaws.com/lokalise-assets/cli/lokalise-0.58-linux-amd64.tgz /tmp
+ADD https://s3-eu-west-1.amazonaws.com/lokalise-assets/cli/lokalise-0.581-linux-amd64.tgz /tmp
 RUN cd tmp && tar xvfz lokalise*.tgz && mv /tmp/lokalise /usr/local/bin
 
 # Install Goss
