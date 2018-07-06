@@ -1,34 +1,35 @@
-IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
-21f28c726e75        4 seconds ago        /bin/sh -c apt-get remove -y --purge apt-uti…   5.44MB              
-634f326fcc68        8 seconds ago        /bin/sh -c curl -fsSL https://goss.rocks/ins…   8.52MB              
-6e43a960d785        14 seconds ago       /bin/sh -c cd tmp && tar xvfz lokalise*.tgz …   8.19MB              
-eff0006be70e        15 seconds ago       /bin/sh -c #(nop) ADD 6044ae2b0f237c138cc745…   2.8MB               
-6f1d279a3f4a        16 seconds ago       /bin/sh -c chmod +x /usr/local/bin/circleci     3.48kB              
-813c63f7a9be        17 seconds ago       /bin/sh -c #(nop) ADD 07f68cb920e9c60ab2a66b…   3.48kB              
-5be87559e824        18 seconds ago       /bin/sh -c #(nop) COPY file:831ca7e1e64d7b3b…   19.9MB              
-fbaace27adfb        19 seconds ago       /bin/sh -c chmod +x /usr/local/bin/cloud_sql…   7.51MB              
-2ca9cb7091dd        20 seconds ago       /bin/sh -c #(nop) ADD ca5ff1a1b68401307625bf…   7.51MB              
-0a401dfbd031        22 seconds ago       /bin/sh -c export CLOUD_SDK_REPO="cloud-sdk-…   175MB               
-70e0c4563e9e        51 seconds ago       /bin/sh -c #(nop) ADD dir:1255903780a4163a49…   333B                
-6633bf08a704        51 seconds ago       /bin/sh -c apt-get update &&     apt-get ins…   223MB               
-6df9a932c69b        About a minute ago   /bin/sh -c #(nop)  ENV DBUS_SESSION_BUS_ADDR…   0B                  
-6d3c22758661        About a minute ago   /bin/sh -c curl --silent --location https://…   87.3MB              
-1f2257fdd2de        About a minute ago   /bin/sh -c apt-get update && apt-get install…   69.2MB              
-9e8df1e63d97        2 minutes ago        /bin/sh -c php -r "readfile('http://getcompo…   1.85MB              
-75b939cb0424        2 minutes ago        /bin/sh -c add-apt-repository -y ppa:ondrej/…   246MB               
-41d3763ae2c1        2 weeks ago          /bin/sh -c apt-get update     && apt-get ins…   237MB               
-1bccf121b4f9        2 weeks ago          /bin/sh -c #(nop)  ENV CLOUD_SDK_VERSION=200…   0B                  
-5d8e869d9ef0        2 weeks ago          /bin/sh -c #(nop)  ENV npm_config_unsafe_per…   0B                  
-e9250d2afff6        2 weeks ago          /bin/sh -c #(nop)  ENV npm_config_loglevel=w…   0B                  
-b27feb7ed5fd        2 weeks ago          /bin/sh -c #(nop)  ENV TERM=xterm               0B                  
-bd4a85f16fc6        6 months ago         /bin/sh -c #(nop)  ENV LC_ALL=C.UTF-8           0B                  
-71da8a6dc173        6 months ago         /bin/sh -c #(nop)  ENV LANGUAGE=en_US:en        0B                  
-5f1a52cd8264        6 months ago         /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                  
-7b857b86b07c        6 months ago         /bin/sh -c #(nop)  ENV DEBIAN_FRONTEND=nonin…   0B                  
-b9cd32fdc4f0        6 months ago         /bin/sh -c #(nop)  LABEL maintainer=Hypefact…   0B                  
-747cb2d60bbe        7 months ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
-<missing>           7 months ago         /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
-<missing>           7 months ago         /bin/sh -c sed -i 's/^#\s*\(deb.*universe\)$…   2.76kB              
-<missing>           7 months ago         /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
-<missing>           7 months ago         /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
-<missing>           7 months ago         /bin/sh -c #(nop) ADD file:5b334adf9d9a2256a…   122MB               
+IMAGE               CREATED                  CREATED BY                                      SIZE                COMMENT
+91038dfa69ca        Less than a second ago   /bin/sh -c apt-get remove -y --purge apt-uti…   5.45MB              
+3945f98d3975        4 seconds ago            /bin/sh -c curl -sS https://dl.yarnpkg.com/d…   13MB                
+11570c3b8801        10 seconds ago           /bin/sh -c curl -fsSL https://goss.rocks/ins…   8.53MB              
+a2f630301376        29 seconds ago           /bin/sh -c cd tmp && tar xvfz lokalise*.tgz …   8.19MB              
+537dc8ecb56d        31 seconds ago           /bin/sh -c #(nop) ADD 6044ae2b0f237c138cc745…   2.8MB               
+fc46018f5c01        32 seconds ago           /bin/sh -c chmod +x /usr/local/bin/circleci     3.48kB              
+417b017d4351        34 seconds ago           /bin/sh -c #(nop) ADD 71e8fa25f74e08f36a608a…   3.48kB              
+5be87559e824        6 weeks ago              /bin/sh -c #(nop) COPY file:831ca7e1e64d7b3b…   19.9MB              
+fbaace27adfb        6 weeks ago              /bin/sh -c chmod +x /usr/local/bin/cloud_sql…   7.51MB              
+2ca9cb7091dd        6 weeks ago              /bin/sh -c #(nop) ADD ca5ff1a1b68401307625bf…   7.51MB              
+0a401dfbd031        6 weeks ago              /bin/sh -c export CLOUD_SDK_REPO="cloud-sdk-…   175MB               
+70e0c4563e9e        6 weeks ago              /bin/sh -c #(nop) ADD dir:1255903780a4163a49…   333B                
+6633bf08a704        6 weeks ago              /bin/sh -c apt-get update &&     apt-get ins…   223MB               
+6df9a932c69b        6 weeks ago              /bin/sh -c #(nop)  ENV DBUS_SESSION_BUS_ADDR…   0B                  
+6d3c22758661        6 weeks ago              /bin/sh -c curl --silent --location https://…   87.3MB              
+1f2257fdd2de        6 weeks ago              /bin/sh -c apt-get update && apt-get install…   69.2MB              
+9e8df1e63d97        6 weeks ago              /bin/sh -c php -r "readfile('http://getcompo…   1.85MB              
+75b939cb0424        6 weeks ago              /bin/sh -c add-apt-repository -y ppa:ondrej/…   246MB               
+41d3763ae2c1        8 weeks ago              /bin/sh -c apt-get update     && apt-get ins…   237MB               
+1bccf121b4f9        8 weeks ago              /bin/sh -c #(nop)  ENV CLOUD_SDK_VERSION=200…   0B                  
+5d8e869d9ef0        8 weeks ago              /bin/sh -c #(nop)  ENV npm_config_unsafe_per…   0B                  
+e9250d2afff6        8 weeks ago              /bin/sh -c #(nop)  ENV npm_config_loglevel=w…   0B                  
+b27feb7ed5fd        8 weeks ago              /bin/sh -c #(nop)  ENV TERM=xterm               0B                  
+bd4a85f16fc6        8 months ago             /bin/sh -c #(nop)  ENV LC_ALL=C.UTF-8           0B                  
+71da8a6dc173        8 months ago             /bin/sh -c #(nop)  ENV LANGUAGE=en_US:en        0B                  
+5f1a52cd8264        8 months ago             /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                  
+7b857b86b07c        8 months ago             /bin/sh -c #(nop)  ENV DEBIAN_FRONTEND=nonin…   0B                  
+b9cd32fdc4f0        8 months ago             /bin/sh -c #(nop)  LABEL maintainer=Hypefact…   0B                  
+747cb2d60bbe        8 months ago             /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
+<missing>           8 months ago             /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
+<missing>           8 months ago             /bin/sh -c sed -i 's/^#\s*\(deb.*universe\)$…   2.76kB              
+<missing>           8 months ago             /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
+<missing>           8 months ago             /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
+<missing>           8 months ago             /bin/sh -c #(nop) ADD file:5b334adf9d9a2256a…   122MB               

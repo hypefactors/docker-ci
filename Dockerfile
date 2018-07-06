@@ -80,6 +80,13 @@ RUN cd tmp && tar xvfz lokalise*.tgz && mv /tmp/lokalise /usr/local/bin
 # Install Goss
 RUN curl -fsSL https://goss.rocks/install | sh
 
+# Node.js v9
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \ 
+    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
+    && apt-get update && apt-get install yarn
+
+
+
 # Cleanup for smaller image size
 RUN apt-get remove -y --purge apt-utils software-properties-common \
     && apt-get clean \
