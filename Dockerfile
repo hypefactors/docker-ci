@@ -51,9 +51,6 @@ RUN apt-get update && \
     apt-get install -y libgtk2.0-0 libnotify-dev libgconf-2-4 \
     libnss3 libxss1 libasound2 xvfb
 
-# Copy configuration scripts
-ADD config /config
-
 # Google Cloud SDK
 # copied from https://hub.docker.com/r/google/cloud-sdk/~/dockerfile/
 RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
@@ -78,15 +75,10 @@ RUN chmod +x /usr/local/bin/circleci
 ADD https://s3-eu-west-1.amazonaws.com/lokalise-assets/cli/lokalise-0.581-linux-amd64.tgz /tmp
 RUN cd tmp && tar xvfz lokalise*.tgz && mv /tmp/lokalise /usr/local/bin
 
-# Install Goss
-RUN curl -fsSL https://goss.rocks/install | sh
-
 # Node.js v9
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \ 
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
     && apt-get update && apt-get install yarn
-
-
 
 # Cleanup for smaller image size
 RUN apt-get remove -y --purge apt-utils software-properties-common \

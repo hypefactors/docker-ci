@@ -1,8 +1,0 @@
-version: "3"
-
-services:
-  sut:
-    build: .
-    volumes:
-      - ./test:/goss
-    command: ["/usr/local/bin/goss", "-g", "/goss/goss.yaml", "validate"]

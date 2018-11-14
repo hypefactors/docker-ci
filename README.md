@@ -8,10 +8,3 @@
 * Node.js 9
 * Google Chrome 64
 
-## Testing
-
-> Make sure that you have Goss and Dgoss installed
-https://github.com/aelsabbahy/goss/tree/master/extras/dgoss
-
-
-`make tests`
