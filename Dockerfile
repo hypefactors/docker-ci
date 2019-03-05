@@ -38,8 +38,8 @@ RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-di
 # MySQL
 RUN apt-get update && apt-get install -y mysql-client 
 
-# Node.js v9
-RUN curl --silent --location https://deb.nodesource.com/setup_9.x | bash - \
+# Node.js v10
+RUN curl --silent --location https://deb.nodesource.com/setup_10.x | bash - \
     && apt-get install nodejs -y
 
 # "fake" dbus address to prevent errors
