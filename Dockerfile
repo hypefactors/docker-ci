@@ -80,6 +80,11 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
     && apt-get update && apt-get install yarn
 
+# Blackfire
+RUN curl https://packages.blackfire.io/gpg.key | apt-key add - \
+    && echo "deb http://packages.blackfire.io/debian any main" | tee /etc/apt/sources.list.d/blackfire.list \
+    && apt-get update && apt-get install blackfire-agent blackfire-php 
+
 # Cleanup for smaller image size
 RUN apt-get remove -y --purge apt-utils software-properties-common \
     && apt-get clean \
