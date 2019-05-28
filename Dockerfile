@@ -12,10 +12,10 @@ ENV LC_ALL C.UTF-8
 # good colors for most applications
 ENV TERM xterm
 # avoid million NPM install messages
-ENV npm_config_loglevel warn 
+ENV npm_config_loglevel warn
 # allow installing when the main user is root
 ENV npm_config_unsafe_perm true
-# 
+#
 ENV CLOUD_SDK_VERSION 200.0.0
 
 # INSTALL
@@ -26,9 +26,9 @@ RUN apt-get update \
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
     && apt-get install -y libpq-dev libpng-dev php-pear \
        php7.2-dev php7.2-fpm php7.2-cli php7.2-gd \
-       php7.2-mysql php7.2-sqlite3 php7.2-imap php7.2-mbstring \       
+       php7.2-mysql php7.2-sqlite3 php7.2-imap php7.2-mbstring \
        php7.2-json php7.2-curl php7.2-gd php7.2-gmp php7.2-zip php-redis php7.2-xml \
-       php-yaml php-mongodb \ 
+       php-yaml php-mongodb \
        php7.2-bcmath \
     && mkdir /run/php
 
@@ -36,7 +36,7 @@ RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
 # MySQL
-RUN apt-get update && apt-get install -y mysql-client 
+RUN apt-get update && apt-get install -y mysql-client
 
 # Node.js v10
 RUN curl --silent --location https://deb.nodesource.com/setup_10.x | bash - \
@@ -60,7 +60,7 @@ RUN export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
     apt-get install -y google-cloud-sdk=${CLOUD_SDK_VERSION}-0 && \
     gcloud config set core/disable_usage_reporting true && \
     gcloud config set component_manager/disable_update_check true && \
-    gcloud config set metrics/environment github_docker_image 
+    gcloud config set metrics/environment github_docker_image
 
 # Cloud SQL Proxy
 ADD https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 /usr/local/bin/cloud_sql_proxy
@@ -76,14 +76,22 @@ ADD https://s3-eu-west-1.amazonaws.com/lokalise-assets/cli/lokalise-0.581-linux-
 RUN cd tmp && tar xvfz lokalise*.tgz && mv /tmp/lokalise /usr/local/bin
 
 # Node.js v9
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \ 
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
     && apt-get update && apt-get install yarn
 
 # Blackfire
 RUN curl https://packages.blackfire.io/gpg.key | apt-key add - \
     && echo "deb http://packages.blackfire.io/debian any main" | tee /etc/apt/sources.list.d/blackfire.list \
-    && apt-get update && apt-get install blackfire-agent blackfire-php 
+    && apt-get update && apt-get install blackfire-agent blackfire-php
+
+# Dockerize
+RUN apt-get update && apt-get install -y wget
+
+ENV DOCKERIZE_VERSION v0.6.1
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 # Cleanup for smaller image size
 RUN apt-get remove -y --purge apt-utils software-properties-common \
