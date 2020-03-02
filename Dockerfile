@@ -29,7 +29,7 @@ RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
        php7.2-mysql php7.2-sqlite3 php7.2-imap php7.2-mbstring \
        php7.2-json php7.2-curl php7.2-gd php7.2-gmp php7.2-zip php-redis php7.2-xml \
        php-yaml php-mongodb \
-       php7.2-bcmath \
+       php7.2-bcmath php7.2-intl \
     && mkdir /run/php
 
 # Composer
