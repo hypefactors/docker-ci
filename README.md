@@ -2,9 +2,8 @@
 
 ## Contains:
 * Ubuntu 16.04 as a base image
-* PHP 7.1
+* PHP 7.2
 * Composer
 * MySQL
-* Node.js 9
+* Node.js 12
 * Google Chrome 64
-
