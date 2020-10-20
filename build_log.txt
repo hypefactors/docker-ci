@@ -1,36 +1,38 @@
-IMAGE               CREATED              CREATED BY                                      SIZE                COMMENT
-cf2d9c94c65c        1 second ago         /bin/sh -c apt-get remove -y --purge apt-uti…   3.63MB              
-fc49e077904f        4 seconds ago        /bin/sh -c wget https://github.com/jwilder/d…   8.53MB              
-98fdfda9a33d        15 seconds ago       /bin/sh -c #(nop)  ENV DOCKERIZE_VERSION=v0.…   0B                  
-f655e42d4008        15 seconds ago       /bin/sh -c apt-get update && apt-get install…   4.69MB              
-b731a360f15c        22 seconds ago       /bin/sh -c curl https://packages.blackfire.i…   31.6MB              
-c5fc6dbaf6e0        35 seconds ago       /bin/sh -c curl -sS https://dl.yarnpkg.com/d…   7.92MB              
-f14ce4445127        41 seconds ago       /bin/sh -c cd tmp && tar xvfz lokalise*.tgz …   8.19MB              
-067032a255b6        43 seconds ago       /bin/sh -c #(nop) ADD 6044ae2b0f237c138cc745…   2.8MB               
-cd26a6c87760        44 seconds ago       /bin/sh -c chmod +x /usr/local/bin/circleci     4.69kB              
-ff9ac1391db4        45 seconds ago       /bin/sh -c #(nop) ADD 5b7fed71dbd2a8ce69334c…   4.69kB              
-c8919f7fef98        46 seconds ago       /bin/sh -c #(nop) COPY file:831ca7e1e64d7b3b…   19.9MB              
-ebcb3547a7dd        47 seconds ago       /bin/sh -c chmod +x /usr/local/bin/cloud_sql…   13.1MB              
-06d792563559        48 seconds ago       /bin/sh -c #(nop) ADD 4be1ca410433cdd54979e7…   13.1MB              
-912a635718c4        50 seconds ago       /bin/sh -c export CLOUD_SDK_REPO="cloud-sdk-…   174MB               
-d6f255826978        About a minute ago   /bin/sh -c apt-get update &&     apt-get ins…   211MB               
-dff6b1f6c422        2 minutes ago        /bin/sh -c #(nop)  ENV DBUS_SESSION_BUS_ADDR…   0B                  
-5b1360cb89f0        2 minutes ago        /bin/sh -c curl --silent --location https://…   96.1MB              
-a6a345883ba4        2 minutes ago        /bin/sh -c apt-get update && apt-get install…   68.5MB              
-5928c1ad388b        2 minutes ago        /bin/sh -c php -r "readfile('http://getcompo…   1.92MB              
-ef4e3ae4104a        2 minutes ago        /bin/sh -c add-apt-repository -y ppa:ondrej/…   229MB               
-d0e95336ace4        4 minutes ago        /bin/sh -c apt-get update     && apt-get ins…   211MB               
-56a2564ba576        4 minutes ago        /bin/sh -c #(nop)  ENV CLOUD_SDK_VERSION=200…   0B                  
-f04c7fdb56d5        4 minutes ago        /bin/sh -c #(nop)  ENV npm_config_unsafe_per…   0B                  
-e2ab277ee072        4 minutes ago        /bin/sh -c #(nop)  ENV npm_config_loglevel=w…   0B                  
-2eb9aef1d0a3        4 minutes ago        /bin/sh -c #(nop)  ENV TERM=xterm               0B                  
-3d5c8bdead3e        4 minutes ago        /bin/sh -c #(nop)  ENV LC_ALL=C.UTF-8           0B                  
-824ce713990a        4 minutes ago        /bin/sh -c #(nop)  ENV LANGUAGE=en_US:en        0B                  
-292aa9f0504a        4 minutes ago        /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                  
-d5b2358f134a        4 minutes ago        /bin/sh -c #(nop)  ENV DEBIAN_FRONTEND=nonin…   0B                  
-038636559b61        4 minutes ago        /bin/sh -c #(nop)  LABEL maintainer=Hypefact…   0B                  
-2a697363a870        12 days ago          /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
-<missing>           12 days ago          /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
-<missing>           12 days ago          /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
-<missing>           12 days ago          /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
-<missing>           12 days ago          /bin/sh -c #(nop) ADD file:a65e0467dbedc0992…   119MB               
+IMAGE               CREATED                  CREATED BY                                      SIZE                COMMENT
+c65137e30746        Less than a second ago   /bin/sh -c apt-get remove -y --purge apt-uti…   3.73MB              
+dd97caa393f3        2 seconds ago            /bin/sh -c wget https://github.com/jwilder/d…   8.53MB              
+0c8b2c4a8b13        5 seconds ago            /bin/sh -c #(nop)  ENV DOCKERIZE_VERSION=v0.…   0B                  
+6ce8586cafc8        5 seconds ago            /bin/sh -c apt-get update                       669kB               
+27d14a358f35        8 seconds ago            /bin/sh -c curl https://packages.blackfire.i…   41.2MB              
+a102848e0e93        23 seconds ago           /bin/sh -c curl -sS https://dl.yarnpkg.com/d…   8.52MB              
+8d238f9377bb        30 seconds ago           /bin/sh -c cd tmp && tar xvfz lokalise*.tgz …   8.19MB              
+9699cf4c98fe        30 seconds ago           /bin/sh -c #(nop) ADD 6044ae2b0f237c138cc745…   2.8MB               
+452bf8b9aebc        32 seconds ago           /bin/sh -c chmod +x /usr/local/bin/circleci     4.69kB              
+63f3dd909f30        32 seconds ago           /bin/sh -c #(nop) ADD 5b7fed71dbd2a8ce69334c…   4.69kB              
+f00d2c470866        33 seconds ago           /bin/sh -c #(nop) COPY file:831ca7e1e64d7b3b…   19.9MB              
+6bffd2f2be24        33 seconds ago           /bin/sh -c chmod +x /usr/local/bin/cloud_sql…   16.4MB              
+c6acc13ed79c        34 seconds ago           /bin/sh -c #(nop) ADD ea61647823c2cbb2500b1d…   16.4MB              
+3d5b60876ef6        36 seconds ago           /bin/sh -c export CLOUD_SDK_REPO="cloud-sdk-…   174MB               
+449c56cdb3c9        About a minute ago       /bin/sh -c apt-get update &&     apt-get ins…   211MB               
+a8f8a13e6239        About a minute ago       /bin/sh -c #(nop)  ENV DBUS_SESSION_BUS_ADDR…   0B                  
+d55f3e3d44fc        About a minute ago       /bin/sh -c curl --silent --location https://…   118MB               
+4781ebf7879e        2 minutes ago            /bin/sh -c apt-get update && apt-get install…   68MB                
+567d42eb13ae        2 minutes ago            /bin/sh -c dpkg -i mysql-apt-config_0.8.15-1…   2.6MB               
+9e15ef048e13        2 minutes ago            /bin/sh -c wget https://dev.mysql.com/get/my…   35.7kB              
+7d3cc31881fb        2 minutes ago            /bin/sh -c php -r "readfile('http://getcompo…   2MB                 
+baa17a9bf051        2 minutes ago            /bin/sh -c add-apt-repository -y ppa:ondrej/…   266MB               
+96a5b9a64d7a        3 minutes ago            /bin/sh -c apt-get update     && apt-get ins…   216MB               
+10d47842b7d3        9 minutes ago            /bin/sh -c #(nop)  ENV CLOUD_SDK_VERSION=200…   0B                  
+b8333e935bd1        9 minutes ago            /bin/sh -c #(nop)  ENV npm_config_unsafe_per…   0B                  
+4bafe09d200f        9 minutes ago            /bin/sh -c #(nop)  ENV npm_config_loglevel=w…   0B                  
+09aa57a6e9c4        9 minutes ago            /bin/sh -c #(nop)  ENV TERM=xterm               0B                  
+01ba754d023a        9 minutes ago            /bin/sh -c #(nop)  ENV LC_ALL=C.UTF-8           0B                  
+aaf22fa59bdb        9 minutes ago            /bin/sh -c #(nop)  ENV LANGUAGE=en_US:en        0B                  
+6335062f5b0b        9 minutes ago            /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B                  
+d11c3fbca6b2        9 minutes ago            /bin/sh -c #(nop)  ENV DEBIAN_FRONTEND=nonin…   0B                  
+dfd92d401a6f        9 minutes ago            /bin/sh -c #(nop)  LABEL maintainer=Hypefact…   0B                  
+096efd74bb89        3 weeks ago              /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B                  
+<missing>           3 weeks ago              /bin/sh -c mkdir -p /run/systemd && echo 'do…   7B                  
+<missing>           3 weeks ago              /bin/sh -c rm -rf /var/lib/apt/lists/*          0B                  
+<missing>           3 weeks ago              /bin/sh -c set -xe   && echo '#!/bin/sh' > /…   745B                
+<missing>           3 weeks ago              /bin/sh -c #(nop) ADD file:23a55d7e93b396e49…   127MB               

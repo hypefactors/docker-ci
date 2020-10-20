@@ -20,7 +20,7 @@ ENV CLOUD_SDK_VERSION 200.0.0
 
 # INSTALL
 RUN apt-get update \
-    && apt-get install -y apt-utils curl unzip git software-properties-common lsb-release
+    && apt-get install -y apt-utils curl unzip git software-properties-common lsb-release wget
 
 # PHP 7.2
 RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
@@ -35,7 +35,9 @@ RUN add-apt-repository -y ppa:ondrej/php && apt-get update \
 # Composer
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
-# MySQL
+# MySQL 8.0
+RUN wget https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb
+RUN dpkg -i mysql-apt-config_0.8.15-1_all.deb
 RUN apt-get update && apt-get install -y mysql-client
 
 # Node.js v12
@@ -86,7 +88,7 @@ RUN curl https://packages.blackfire.io/gpg.key | apt-key add - \
     && apt-get update && apt-get install blackfire-agent blackfire-php
 
 # Dockerize
-RUN apt-get update && apt-get install -y wget
+RUN apt-get update
 
 ENV DOCKERIZE_VERSION v0.6.1
 RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
