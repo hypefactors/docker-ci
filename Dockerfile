@@ -22,7 +22,7 @@ ENV npm_config_unsafe_perm=true
 
 ENV CLOUD_SDK_VERSION=232.0.0
 
-ENV DOCKERIZE_VERSION v0.6.1
+ENV DOCKERIZE_VERSION=v0.6.1
 
 # "fake" dbus address to prevent errors
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
@@ -62,33 +62,30 @@ RUN apt-get update -y && apt-get upgrade -y \
     # Install and setup PHP
     && echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
     && apt-get update -y \
-    && apt-get install -y \
-        php7.4-cli \
-        php7.4-fpm \
-        php7.4-apcu \
-        php7.4-apcu-bc \
-        php7.4-bcmath \
-        php7.4-bz2 \
-        php7.4-ctype \
-        php7.4-curl \
-        php7.4-fileinfo \
-        php7.4-gd \
-        php7.4-gmp \
-        php7.4-igbinary \
-        php7.4-imagick \
-        php7.4-imap \
-        php7.4-intl \
-        php7.4-json \
-        php7.4-mbstring \
-        php7.4-msgpack \
-        php7.4-mysql \
-        php7.4-readline \
-        php7.4-redis \
-        php7.4-soap \
-        php7.4-tokenizer \
-        php7.4-xml \
-        php7.4-yaml \
-        php7.4-zip \
+    && apt-get install -y --no-install-recommends \
+        php8.0-cli \
+        php8.0-fpm \
+        php8.0-apcu \
+        php8.0-bcmath \
+        php8.0-bz2 \
+        php8.0-ctype \
+        php8.0-curl \
+        php8.0-fileinfo \
+        php8.0-gd \
+        php8.0-gmp \
+        php8.0-igbinary \
+        php8.0-imap \
+        php8.0-intl \
+        php8.0-mbstring \
+        php8.0-msgpack \
+        php8.0-mysql \
+        php8.0-readline \
+        php8.0-redis \
+        php8.0-soap \
+        php8.0-tokenizer \
+        php8.0-xml \
+        php8.0-yaml \
+        php8.0-zip \
     && mkdir -p /run/php \
     && chown -Rf www-data:www-data /var/lib/php \
     \
