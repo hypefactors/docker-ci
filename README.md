@@ -10,3 +10,4 @@
 * CircleCI CLI
 * Google Cloud SDK
 * Dockerize
+* Lokalise CLI v2

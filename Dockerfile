@@ -123,6 +123,9 @@ RUN apt-get update -y && apt-get upgrade -y \
     \
     # && curl -fLSs https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh | bash \
     \
+    # Install Lokalise CLI v2
+    && curl -sfL https://raw.githubusercontent.com/lokalise/lokalise-cli-2-go/master/install.sh | sh \
+    \
     # Cleanup
     && apt-get purge -y \
     && apt-get autoremove -y \
