@@ -21,7 +21,6 @@ ENV npm_config_loglevel=warn
 ENV npm_config_unsafe_perm=true
 
 ENV CLOUD_SDK_VERSION=232.0.0
-
 ENV DOCKERIZE_VERSION=v0.6.1
 
 # "fake" dbus address to prevent errors
