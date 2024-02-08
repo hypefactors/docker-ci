@@ -1,8 +1,11 @@
-IMAGE=hypefactors/docker-ci:latest
+IMAGE=hypefactors/docker-ci:php81
 
 shell:
-	docker run -it hypefactors/docker-ci:latest bash
+	docker run -it $(IMAGE) bash
+
+publish:
+	docker push $(IMAGE)
 
 build:
-	docker build -t hypefactors/docker-ci:latest .
+	docker build -t $(IMAGE) .
 	docker history $(IMAGE) > build_log.txt
