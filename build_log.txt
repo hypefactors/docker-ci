@@ -1,32 +1,32 @@
 IMAGE          CREATED          CREATED BY                                      SIZE      COMMENT
-3935ac59a735   3 seconds ago    COPY ./configs/php/cli/php.ini /cli/conf.d/c…   1.6kB     buildkit.dockerfile.v0
-<missing>      3 seconds ago    COPY ./configs/php/fpm/pool.d/www.conf /fpm/…   330B      buildkit.dockerfile.v0
-<missing>      3 seconds ago    COPY ./configs/php/fpm/php-fpm.conf /fpm/php…   140B      buildkit.dockerfile.v0
-<missing>      3 seconds ago    COPY ./configs/php/fpm/php.ini /fpm/conf.d/c…   1.61kB    buildkit.dockerfile.v0
-<missing>      3 seconds ago    RUN /bin/sh -c apt-get purge -y     && apt-g…   4.68MB    buildkit.dockerfile.v0
-<missing>      23 seconds ago   RUN /bin/sh -c curl -sfL https://raw.githubu…   9.3MB     buildkit.dockerfile.v0
-<missing>      30 seconds ago   RUN /bin/sh -c wget https://github.com/jwild…   8.53MB    buildkit.dockerfile.v0
-<missing>      31 seconds ago   RUN /bin/sh -c echo "deb https://packages.cl…   880MB     buildkit.dockerfile.v0
-<missing>      2 minutes ago    RUN /bin/sh -c apt-get update -y     && apt-…   79.8MB    buildkit.dockerfile.v0
-<missing>      3 minutes ago    RUN /bin/sh -c curl -sS https://dl.yarnpkg.c…   10.6MB    buildkit.dockerfile.v0
-<missing>      3 minutes ago    RUN /bin/sh -c curl --silent --location http…   101MB     buildkit.dockerfile.v0
-<missing>      5 minutes ago    RUN /bin/sh -c php -r "readfile('http://getc…   2.86MB    buildkit.dockerfile.v0
-<missing>      6 minutes ago    RUN /bin/sh -c echo "deb http://ppa.launchpa…   39.7MB    buildkit.dockerfile.v0
-<missing>      9 minutes ago    RUN /bin/sh -c mkdir -p ~/.gnupg     && echo…   1.12kB    buildkit.dockerfile.v0
-<missing>      9 minutes ago    RUN /bin/sh -c apt-get update -y && apt-get …   1.26GB    buildkit.dockerfile.v0
-<missing>      18 minutes ago   ENV DOCKERIZE_VERSION=v0.6.1                    0B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   ENV npm_config_unsafe_perm=true                 0B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   ENV npm_config_loglevel=warn                    0B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   ENV LC_ALL=C.UTF-8                              0B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   ENV LANG=C.UTF-8                                0B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   ENV LANGUAGE=en_US:en                           0B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   RUN /bin/sh -c ln -snf /usr/share/zoneinfo/$…   4B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   ENV TZ=UTC                                      0B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   ENV DEBIAN_FRONTEND=noninteractive              0B        buildkit.dockerfile.v0
-<missing>      18 minutes ago   LABEL maintainer=support@hypefactors.com        0B        buildkit.dockerfile.v0
-<missing>      2 weeks ago      /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B        
-<missing>      2 weeks ago      /bin/sh -c #(nop) ADD file:4b4e122c96445546e…   72.8MB    
-<missing>      2 weeks ago      /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
-<missing>      2 weeks ago      /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
-<missing>      2 weeks ago      /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B        
-<missing>      2 weeks ago      /bin/sh -c #(nop)  ARG RELEASE                  0B        
+0b2dc7202100   4 seconds ago    COPY ./configs/php/cli/php.ini /cli/conf.d/c…   1.6kB     buildkit.dockerfile.v0
+<missing>      4 seconds ago    COPY ./configs/php/fpm/pool.d/www.conf /fpm/…   330B      buildkit.dockerfile.v0
+<missing>      4 seconds ago    COPY ./configs/php/fpm/php-fpm.conf /fpm/php…   140B      buildkit.dockerfile.v0
+<missing>      4 seconds ago    COPY ./configs/php/fpm/php.ini /fpm/conf.d/c…   1.61kB    buildkit.dockerfile.v0
+<missing>      4 seconds ago    RUN /bin/sh -c apt-get purge -y     && apt-g…   0B        buildkit.dockerfile.v0
+<missing>      20 seconds ago   RUN /bin/sh -c curl -sfL https://raw.githubu…   10.1MB    buildkit.dockerfile.v0
+<missing>      26 seconds ago   RUN /bin/sh -c wget https://github.com/jwild…   8.53MB    buildkit.dockerfile.v0
+<missing>      27 seconds ago   RUN /bin/sh -c echo "deb https://packages.cl…   862MB     buildkit.dockerfile.v0
+<missing>      2 minutes ago    RUN /bin/sh -c apt-get update -y     && apt-…   65.2MB    buildkit.dockerfile.v0
+<missing>      3 minutes ago    RUN /bin/sh -c curl -sS https://dl.yarnpkg.c…   8.56MB    buildkit.dockerfile.v0
+<missing>      3 minutes ago    RUN /bin/sh -c curl --silent --location http…   98.7MB    buildkit.dockerfile.v0
+<missing>      6 minutes ago    RUN /bin/sh -c php -r "readfile('http://getc…   3.13MB    buildkit.dockerfile.v0
+<missing>      6 minutes ago    RUN /bin/sh -c echo "Setting up: PHP"     &&…   74.1MB    buildkit.dockerfile.v0
+<missing>      10 minutes ago   RUN /bin/sh -c echo "Setting up: GnuPG"     …   2.84kB    buildkit.dockerfile.v0
+<missing>      10 minutes ago   RUN /bin/sh -c apt-get update -y && apt-get …   812MB     buildkit.dockerfile.v0
+<missing>      15 minutes ago   ENV DOCKERIZE_VERSION=v0.6.1                    0B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   ENV npm_config_unsafe_perm=true                 0B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   ENV npm_config_loglevel=warn                    0B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   ENV LC_ALL=C.UTF-8                              0B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   ENV LANG=C.UTF-8                                0B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   ENV LANGUAGE=en_US:en                           0B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   RUN /bin/sh -c ln -snf /usr/share/zoneinfo/$…   4B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   ENV TZ=UTC                                      0B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   ENV DEBIAN_FRONTEND=noninteractive              0B        buildkit.dockerfile.v0
+<missing>      15 minutes ago   LABEL maintainer=support@hypefactors.com        0B        buildkit.dockerfile.v0
+<missing>      13 days ago      /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B        
+<missing>      13 days ago      /bin/sh -c #(nop) ADD file:36d136943d44dbe1f…   77.9MB    
+<missing>      13 days ago      /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
+<missing>      13 days ago      /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
+<missing>      13 days ago      /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B        
+<missing>      13 days ago      /bin/sh -c #(nop)  ARG RELEASE                  0B        

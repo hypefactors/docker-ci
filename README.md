@@ -1,8 +1,8 @@
 # Hypefactors CI Docker image
 
 ## Contains:
-* Ubuntu 20.04
-* PHP 8.0
+* Ubuntu 22.04
+* PHP 8.4
 * Composer 2
 * MySQL Client
 * Node.js 14

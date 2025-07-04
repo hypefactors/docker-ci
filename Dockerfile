@@ -1,7 +1,7 @@
 # to get docker, on which circleci is dependent
 FROM docker:17.12.0-ce as static-docker-source
 
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 LABEL maintainer="support@hypefactors.com"
 
@@ -29,53 +29,63 @@ RUN apt-get update -y && apt-get upgrade -y \
         ca-certificates \
         curl \
         git \
+        ghostscript \
         gnupg \
         unzip \
         wget \
+        software-properties-common \
+        vim \
         # Cypress related
+        libatk-bridge2.0-0 \
+        libgtk-3.0 \ 
         libgtk2.0-0 \
         libnotify-dev \
         libgconf-2-4 \
         libnss3 \
         libxss1 \
         libasound2 \
+        libgbm1 \
         xvfb \
         snapd
 
 # Setup GnuPG
-RUN mkdir -p ~/.gnupg \
+RUN echo "Setting up: GnuPG" \
+    && mkdir -p ~/.gnupg \
+    && chmod 600 ~/.gnupg \
     && echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf \
-    && apt-key adv --homedir ~/.gnupg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E5267A6C \
-    && apt-key adv --homedir ~/.gnupg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C300EE8C
+    && echo "keyserver hkp://keyserver.ubuntu.com:80" >> ~/.gnupg/dirmngr.conf \
+    && gpg --homedir ~/.gnupg --recv-keys E5267A6C \
+    && gpg --homedir ~/.gnupg --recv-keys C300EE8C    
 
 # Install and setup PHP
-RUN echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
-    && apt-get update -y \
-    && apt-get install -y --only-upgrade libpcre2-8-0 \
-    && apt-get install -y --no-install-recommends \
-        php8.1-cli \
-        php8.1-fpm \
-        php8.1-apcu \
-        php8.1-bcmath \
-        php8.1-bz2 \
-        php8.1-ctype \
-        php8.1-curl \
-        php8.1-fileinfo \
-        php8.1-gd \
-        php8.1-gmp \
-        php8.1-igbinary \
-        php8.1-imap \
-        php8.1-intl \
-        php8.1-mbstring \
-        php8.1-msgpack \
-        php8.1-mysql \
-        php8.1-readline \
-        php8.1-redis \
-        php8.1-soap \
-        php8.1-tokenizer \
-        php8.1-xml \
-        php8.1-yaml \
-        php8.1-zip \
+RUN echo "Setting up: PHP" \
+    && gpg --recv-key 0x14aa40ec0831756756d7f66c4f4ea0aae5267a6c \
+    && gpg --export 0x14aa40ec0831756756d7f66c4f4ea0aae5267a6c > /usr/share/keyrings/ppa_ondrej_php.gpg \
+    && echo "deb [signed-by=/usr/share/keyrings/ppa_ondrej_php.gpg] https://ppa.launchpadcontent.net/ondrej/php/ubuntu  jammy main" > /etc/apt/sources.list.d/ppa_ondrej_php.list \
+    && apt update \
+    && apt install -y --only-upgrade libpcre2-8-0 \
+    && apt install -y --no-install-recommends \
+        php8.4-cli \
+        php8.4-fpm \
+        php8.4-apcu \
+        php8.4-bcmath \
+        php8.4-bz2 \
+        php8.4-ctype \
+        php8.4-curl \
+        php8.4-fileinfo \
+        php8.4-gd \
+        php8.4-gmp \
+        php8.4-igbinary \
+        php8.4-imap \
+        php8.4-intl \
+        php8.4-mbstring \
+        php8.4-msgpack \
+        php8.4-mysql \
+        php8.4-readline \
+        php8.4-redis \
+        php8.4-tokenizer \
+        php8.4-xml \
+        php8.4-zip \
     && mkdir -p /run/php \
     && chown -Rf www-data:www-data /var/lib/php
 
