@@ -46,6 +46,8 @@ RUN apt-get update -y && apt-get upgrade -y \
         libasound2 \
         libgbm1 \
         xvfb \
+        docker.io \
+        mysql-client \
         snapd
 
 # Setup GnuPG
@@ -92,21 +94,6 @@ RUN echo "Setting up: PHP" \
 # Install Composer
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --quiet --install-dir=/usr/bin/ --filename=composer
 
-# Install Node.js v14
-RUN curl --silent --location https://deb.nodesource.com/setup_14.x | bash - \
-    && apt-get update -y \
-    && apt-get install -y nodejs
-
-# Install Yarn
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
-    && apt-get update -y \
-    && apt-get install yarn
-
-# Install MySQL (used on frontend for faster seeding...)
-RUN apt-get update -y \
-    && apt-get install -y mysql-client
-
 # Install Google Cloud SDK
 RUN echo "deb https://packages.cloud.google.com/apt cloud-sdk main" > /etc/apt/sources.list.d/google-cloud-sdk.list \
     && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
@@ -120,9 +107,6 @@ RUN echo "deb https://packages.cloud.google.com/apt cloud-sdk main" > /etc/apt/s
 RUN wget https://github.com/jwilder/dockerize/releases/download/${DOCKERIZE_VERSION}/dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz \
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz \
     && rm dockerize-linux-amd64-${DOCKERIZE_VERSION}.tar.gz
-
-# Install Lokalise CLI v2
-RUN curl -sfL https://raw.githubusercontent.com/lokalise/lokalise-cli-2-go/master/install.sh | sh
 
 # Cleanup
 RUN apt-get purge -y \
